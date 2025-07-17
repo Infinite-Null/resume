@@ -1,5 +1,4 @@
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -28,7 +27,7 @@
 \DeclareTextFontCommand{\textbf}{\bfseries\color{black}}
 
 \usepackage{charter}
-\usepackage{graphicx}
+\usepackage{graphicx} % New package for image inclusion
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -41,7 +40,8 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
 \addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+% MODIFIED: Increased textheight slightly to help fit content on one page.
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -50,15 +50,16 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
+% MODIFIED: Slightly reduced vspace to condense layout.
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that the generated PDF is machine readable/ATS parsable.
 \pdfgentounicode=1
 
 % -------------------------
-% Custom commands
+% Custom commands with text color has green
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -66,17 +67,18 @@
 }
 
 \newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+  \item\small{
+    {#1 #2 #3 #4 \vspace{-2pt}}
   }
 }
 
+% MODIFIED: Reduced vspace to tighten layout.
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -86,11 +88,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% MODIFIED: Reduced vspace to tighten layout.
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -101,135 +104,136 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+% MODIFIED: Reduced vspace to tighten layout.
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
-% -------------------------------------------
+%-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-% ----------HEADING----------
+%----------HEADING----------
+% MODIFIED: Adjusted spacing in the header to save vertical space.
 \begin{center}
-  {\huge \scshape Ankit Kumar Shah} \\ \vspace{5pt}
-  \small (+91) 7478856289 $|$ \href{mailto:ankit.kum.sha9933@gmail.com}{ankit.kum.sha9933@gmail.com} \\
-  \href{https://github.com/Infinite-Null}{github.com/Infinite-Null} $|$ \href{https://linkedin.com/in/ankit-kumar-shah}{linkedin.com/in/ankit-kumar-shah} $|$ \href{https://portfolio-ankit-kumar-shah.vercel.app/}{Portfolio}\\
-  Siliguri, West Bengal, India
-  \vspace{-8pt}
+    {\huge \scshape Ankit Kumar Shah} \\ \vspace{4pt}
+    \small (+91) 7478856289 $|$ \href{mailto:ankit.kum.sha9933@gmail.com}{ankit.kum.sha9933@gmail.com} $|$ 
+    \href{https://github.com/Infinite-Null}{github.com/Infinite-Null} $|$ \href{https://linkedin.com/in/ankit-kumar-shah}{linkedin.com/in/ankit-kumar-shah} $|$ 
+    \href{https://ankit-portfolio.vercel.app}{Portfolio} \\
+    \vspace{2pt}
+    \small Siliguri, West Bengal, India
+    \vspace{-10pt}
 \end{center}
 
-% -----------SKILLS-----------
+%-----------SKILLS-----------
 \section{Skills}
-\vspace{-2pt}
-\begin{itemize}[leftmargin=0.2in, label={}]
-  {\item{
-                \begin{tabular}{ l@{\hskip 0.2in} l }
-                  \textbf{Programming Languages}: C/C++, HTML, CSS, JavaScript, TypeScript & \textbf{Tools/Technologies}: React.js, Node.js, Redux, MongoDB \\
-                  \textbf{Frameworks/Libraries}: Tailwind CSS, Bootstrap, Next.js & \textbf{Cloud/DevOps}: GCP, Docker, Linux \\
-                  \textbf{Developer Tools}: Postman, Git, GitHub & \textbf{Other}: Data Structures, Algorithms, Competitive Programming \\
-                \end{tabular}
-          }}
-\end{itemize}
-\vspace{-20pt}
+ \vspace{2pt}
+ \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+  \textbf{Programming Languages}: C/C++, HTML, CSS, JavaScript, TypeScript & \textbf{Tool/Technologies}: React.js, Node.js, Redux, MongoDB \\
+  \textbf{Frameworks \& Libraries}: Tailwind CSS, Bootstrap, Postman, GCP & \textbf{Other}: Linux, Docker, Git, GitHub, DSA \\
+ \end{tabularx}
+\vspace{-12pt}
 
-% -----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
 
-\resumeSubheading
-{rtCamp}{July 2024 -- Present}
-{Software Engineer}{Pune, India (Remote)}
-\resumeItemListStart
-\resumeItem{Collaborated with rtCamp team to design and develop an internal ERP system with 20+ custom features, streamlining operations for 50+ users and reducing manual data entry by 40\%.}
-\resumeItem{Developed responsive React interfaces for seamless cross-device experiences, supporting 500+ daily interactions on mobile and desktop platforms.}
-\resumeItem{Managed complex data with Redux, handling 1000+ records, and implemented React Router for navigation across 10+ ERP pages, improving user flow and reducing load times by 35\%.}
-\resumeItem{Integrated frontend with backend via REST APIs for data synchronization, enhancing performance by 50\% and ensuring up-to-date information delivery.}
-\resumeItemListEnd
+%-----------EXPERIENCE-----------
+\section{Technical Experience}
+  \resumeSubHeadingListStart
 
-\resumeSubheading
-{Identitycraft Solutions}{Dec 2023 -- Feb 2024}
-{Frontend Development Intern}{Jalandhar, India (Remote)}
-\resumeItemListStart
-\resumeItem{Designed and developed frontend for Admin Dashboard and B.Pharma sites using React.js and Tailwind CSS, creating seamless user experiences that supported 500+ daily users and reduced page load times by 30\%.}
-\resumeItem{Built interactive web applications with React.js, Sass, and Ant Design, delivering engaging interfaces that increased user engagement by 25\% and reduced application lag by 35\%.}
-\resumeItemListEnd
+    \resumeSubheading
+      {rtCamp}{July 2024 -- Present}
+      {Software Engineer}{Pune - Remote}
+      \resumeItemListStart
+        \resumeItem{Collaborated with rtCamp team to design and develop an internal ERP system with 20+ custom features, streamlining operations for 50+ users and reducing manual data entry by 40\%.}
+        \resumeItem{Developed responsive React interfaces for seamless cross-device experiences, supporting 500+ daily interactions on mobile and desktop.}
+        \resumeItem{Managed complex data with Redux, handling 1000+ records, and implemented React Router for navigation across 10+ ERP pages, improving user flow and reducing load times by 35\%.}
+        \resumeItem{Integrated frontend with backend via REST APIs for data sync, enhancing performance by 50\% and ensuring up-to-date information.}
+      \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-\vspace{-15pt}
+    \resumeSubheading
+      {Identitycraft Solutions}{Dec 2023 -- Feb 2024}
+      {Frontend Development Intern}{Jalandhar - Remote}
+      \resumeItemListStart
+        \resumeItem{Designed and developed frontend for Admin Dashboard and other B.Pharma sites using React.js and Tailwind CSS, creating seamless user experiences that supported 500+ daily users and reduced page load times by 30\%.}
+        \resumeItem{Built interactive web applications with React.js, Sass, and Ant Design, delivering engaging interfaces that increased user engagement by 25\% and reduced application lag by 35\%.}
+      \resumeItemListEnd
 
-% -----------PROJECTS-----------
+  \resumeSubHeadingListEnd
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
+
+%-----------PROJECTS-----------
 \section{Projects}
-\vspace{-6pt}
-\resumeSubHeadingListStart
+    \vspace{-6pt}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{\normalsize{Out of Kind}} $|$ \emph{NextJS, Node.js, Express, MongoDB, Tailwind CSS} $|$ \href{https://out-of-kind.vercel.app/}{Website}, \href{https://github.com/Infinite-Null/OutOfKind}{GitHub}}{March 2024}
+          \resumeItemListStart
+            \resumeItem{Engineered an interactive donation platform leveraging NextJS, Node.js, Express, MongoDB, and Tailwind CSS, resulting in 500+ registered users and a 30\% increase in successful donation requests.}
+            \resumeItem{Implemented a search feature for locating nearby NGOs, enhancing accessibility to local support resources.}
+            \resumeItem{Built a community section where users can share motivational stories, fostering engagement and user interaction.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{\normalsize{Evergreen: Nature at Doorstep}} $|$ \emph{React, React Native, Node.js, Express, MongoDB} $|$ \href{https://github.com/Infinite-Null/Plant-App}{GitHub}}{Oct 2023}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack plant e-commerce store with React, React Native, Node.js, Express, and MongoDB, handling 40+ daily plant purchases.}
+            \resumeItem{Developed an admin dashboard for sellers to add products, manage inventory, and monitor orders by locality.}
+            \resumeItem{Improved admin dashboard performance for faster UI by 20\%, and boosted checkout speed by 40\%.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
-\resumeProjectHeading
-{\textbf{\normalsize{Out of Kind}} $|$ \emph{Next.js, Node.js, Express, MongoDB, Tailwind CSS} $|$ \href{https://out-of-kind.vercel.app/}{Website}, \href{https://github.com/Infinite-Null/OutOfKind}{GitHub}}{March 2024}
-\resumeItemListStart
-\resumeItem{Engineered an interactive donation platform leveraging Next.js, Node.js, Express, MongoDB, and Tailwind CSS, resulting in 500+ registered users and a 30\% increase in successful donation requests.}
-\resumeItem{Implemented a search feature for locating nearby NGOs, enhancing accessibility to local support resources and community engagement.}
-\resumeItem{Built a community section where users can share motivational stories, fostering engagement and user interaction across the platform.}
-\resumeItemListEnd
-\vspace{-15pt}
-
-\resumeProjectHeading
-{\textbf{\normalsize{Evergreen: Nature at Doorstep}} $|$ \emph{React, React Native, Node.js, Express, MongoDB} $|$ \href{https://github.com/Infinite-Null/Plant-App}{GitHub}}{Oct 2023}
-\resumeItemListStart
-\resumeItem{Built a full-stack plant e-commerce store with React, React Native, Node.js, Express, and MongoDB, handling 40+ daily plant purchases and order management.}
-\resumeItem{Developed an admin dashboard for sellers to add products, manage inventory, and monitor orders by locality, streamlining business operations.}
-\resumeItem{Improved admin dashboard performance for faster UI by 20\%, and boosted checkout speed by 40\% through optimized code and efficient data handling.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-\vspace{-10pt}
-
-% -----------EDUCATION-----------
+%-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Lovely Professional University}{July 2021 -- May 2024}
-{Bachelor of Computer Application (CGPA: 9.35 / 10.0)}{Phagwara, Punjab}
-\resumeItemListStart
-\resumeItem{Courses: Data Structures and Algorithms, Web Development, Database Management, Software Engineering, Computer Networks}
-\resumeItemListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lovely Professional University}{July 2021 -- May 2024}
+      {Bachelor of Computer Application (CGPA: 9.35 / 10.0)}{Phagwara, Punjab}
+  \resumeSubHeadingListEnd
+  \vspace{-5pt}
+  
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Army Public School Sukna}{March 2020 -- July 2021}
+      {Senior Secondary (Percentage: 75\%)}{Siliguri, West Bengal}
+  \resumeSubHeadingListEnd
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
-\resumeSubheading
-{Army Public School Sukna}{March 2020 -- July 2021}
-{Senior Secondary (Percentage: 75\%)}{Siliguri, West Bengal}
-\resumeSubHeadingListEnd
-\vspace{-15pt}
-
-% -----------CERTIFICATIONS-----------
-\section{Certifications}
-\resumeSubHeadingListStart
-\resumeSubheading
-{\href{https://google.accredible.com/e2376250-88cd-4b71-8593-1f5503b0848e\#acc.cp1Ir7yQ}{Google Associate Cloud Engineer}}{July 2024}
-{Google Cloud Platform}{}
-\vspace{-16pt}
-
-\resumeSubheading
-{\href{https://www.hackerrank.com/certificates/b1467e16277c}{Certified Frontend Developer (React)}}{Jan 2024}
-{HackerRank}{}
-\resumeSubHeadingListEnd
-\vspace{-15pt}
-
-% -----------ACHIEVEMENTS-----------
+%-----------ACHIEVEMENTS-----------
 \section{Achievements}
-\resumeSubHeadingListStart
-\resumeSubheading
-{\textbf{\normalsize{Open Source Contributions}}}{Oct 2023}
-{}{}
-\vspace{-16pt}
-\resumeItemListStart
-\resumeItem{Top 50,000 contributor in Hacktoberfest through active open-source work and meaningful contributions to various GitHub repositories.}
-\resumeItemListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{\normalsize{Hacktoberfest Contributor}}}{2023}
+      {}{}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
+      \resumeItemListStart
+        \resumeItem{Top 50,000 contributor in Hacktoberfest through active open-source work.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {\textbf{\normalsize{Competitive Programming}}}{2023 -- 2024}
+      {}{}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
+      \resumeItemListStart
+        \resumeItem{Solved 200+ coding questions on different coding platforms like Leetcode and Coding Ninja.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
-\resumeSubheading
-{\textbf{\normalsize{Competitive Programming}}}{Ongoing}
-{}{}
-\vspace{-15pt}
-\resumeItemListStart
-\resumeItem{Solved 200+ coding questions on different coding platforms like LeetCode and Coding Ninja, demonstrating strong problem-solving skills and algorithmic thinking.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{\normalsize{Google Associate Cloud Engineer}} $|$ {\normalfont \href{https://google.accredible.com/e2376250-88cd-4b71-8593-1f5503b0848e#acc.cp1Ir7yQ}{Google}}}{July 2024}
+      {}{}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
+      
+    \resumeSubheading
+      {\textbf{\normalsize{Certified Frontend Developer (React)}} $|$ {\normalfont \href{https://www.hackerrank.com/certificates/b1467e16277c}{HackerRank}}}{Jan 2024}
+      {}{}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
+      
+  \resumeSubHeadingListEnd
 
 \end{document}

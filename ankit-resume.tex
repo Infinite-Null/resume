@@ -40,7 +40,8 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
 \addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+% MODIFIED: Increased textheight slightly to help fit content on one page.
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -49,9 +50,10 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
+% MODIFIED: Slightly reduced vspace to condense layout.
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that the generated PDF is machine readable/ATS parsable.
 \pdfgentounicode=1
@@ -70,12 +72,13 @@
   }
 }
 
+% MODIFIED: Reduced vspace to tighten layout.
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -85,11 +88,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% MODIFIED: Reduced vspace to tighten layout.
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -100,7 +104,8 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+% MODIFIED: Reduced vspace to tighten layout.
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,29 +113,26 @@
 \begin{document}
 
 %----------HEADING----------
-
+% MODIFIED: Adjusted spacing in the header to save vertical space.
 \begin{center}
-    {\huge \scshape Ankit Kumar Shah} \\ \vspace{5pt}
+    {\huge \scshape Ankit Kumar Shah} \\ \vspace{4pt}
     \small (+91) 7478856289 $|$ \href{mailto:ankit.kum.sha9933@gmail.com}{ankit.kum.sha9933@gmail.com} $|$ 
     \href{https://github.com/Infinite-Null}{github.com/Infinite-Null} $|$ \href{https://linkedin.com/in/ankit-kumar-shah}{linkedin.com/in/ankit-kumar-shah} $|$ 
     \href{https://ankit-portfolio.vercel.app}{Portfolio} \\
     \vspace{2pt}
     \small Siliguri, West Bengal, India
-    \vspace{-8pt}
+    \vspace{-10pt}
 \end{center}
 
 %-----------SKILLS-----------
 \section{Skills}
- \vspace{-2pt}
- \begin{itemize}[leftmargin=0.2in, label={}]
-    {\item{
-     \begin{tabular}{ l@{\hskip 0.2in} l }
-     \textbf{Programming Languages}: C/C++, HTML, CSS, JavaScript, TypeScript & \textbf{Tool/Technologies}: React.js, Node.js, Redux, MongoDB \\
-     \textbf{Frameworks \& Libraries}: Tailwind CSS, Bootstrap, Postman, GCP & \textbf{Other}: Linux, Docker, Git, GitHub, DSA \\
-     \end{tabular}
-    }}
- \end{itemize}
- \vspace{-20pt}
+ \vspace{2pt}
+ \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+  \textbf{Programming Languages}: C/C++, HTML, CSS, JavaScript, TypeScript & \textbf{Tool/Technologies}: React.js, Node.js, Redux, MongoDB \\
+  \textbf{Frameworks \& Libraries}: Tailwind CSS, Bootstrap, Postman, GCP & \textbf{Other}: Linux, Docker, Git, GitHub, DSA \\
+ \end{tabularx}
+\vspace{-12pt}
+
 
 %-----------EXPERIENCE-----------
 \section{Technical Experience}
@@ -155,7 +157,7 @@
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -169,7 +171,6 @@
             \resumeItem{Implemented a search feature for locating nearby NGOs, enhancing accessibility to local support resources.}
             \resumeItem{Built a community section where users can share motivational stories, fostering engagement and user interaction.}
           \resumeItemListEnd
-          \vspace{-15pt}
           
       \resumeProjectHeading
           {\textbf{\normalsize{Evergreen: Nature at Doorstep}} $|$ \emph{React, React Native, Node.js, Express, MongoDB} $|$ \href{https://github.com/Infinite-Null/Plant-App}{GitHub}}{Oct 2023}
@@ -180,7 +181,7 @@
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
-\vspace{-10pt}
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -196,7 +197,7 @@
       {Army Public School Sukna}{March 2020 -- July 2021}
       {Senior Secondary (Percentage: 75\%)}{Siliguri, West Bengal}
   \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
@@ -204,7 +205,7 @@
     \resumeSubheading
       {\textbf{\normalsize{Hacktoberfest Contributor}}}{2023}
       {}{}
-      \vspace{-16pt}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
       \resumeItemListStart
         \resumeItem{Top 50,000 contributor in Hacktoberfest through active open-source work.}
       \resumeItemListEnd
@@ -212,13 +213,13 @@
     \resumeSubheading
       {\textbf{\normalsize{Competitive Programming}}}{2023 -- 2024}
       {}{}
-      \vspace{-15pt}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
       \resumeItemListStart
         \resumeItem{Solved 200+ coding questions on different coding platforms like Leetcode and Coding Ninja.}
       \resumeItemListEnd
       
   \resumeSubHeadingListEnd
-\vspace{-15pt}
+\vspace{-12pt} % MODIFIED: Reduced space between sections.
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
@@ -226,12 +227,12 @@
     \resumeSubheading
       {\textbf{\normalsize{Google Associate Cloud Engineer}} $|$ {\normalfont \href{https://google.accredible.com/e2376250-88cd-4b71-8593-1f5503b0848e#acc.cp1Ir7yQ}{Google}}}{July 2024}
       {}{}
-      \vspace{-15pt}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
       
     \resumeSubheading
       {\textbf{\normalsize{Certified Frontend Developer (React)}} $|$ {\normalfont \href{https://www.hackerrank.com/certificates/b1467e16277c}{HackerRank}}}{Jan 2024}
       {}{}
-      \vspace{-15pt}
+      \vspace{-11pt} % MODIFIED: Reduced space to remove blank line.
       
   \resumeSubHeadingListEnd
 
